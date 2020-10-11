@@ -48,17 +48,18 @@ const timeCounter = ()=>{
     milliSecondsCounter =0;
     displayCounter()
  }
-const stopCounter = ()=>{
-   isCounting = false;
-   interval()
-   resetCounter()
-   
+const interval =(value)=>{
+   !value ? start = setInterval(timeCounter,10) : clearInterval(start);
 }
-const interval =()=>{
-   !isCounting ? start = setInterval(timeCounter,10):  clearInterval(start);
+const stopCounter = ()=>{
+   isCounting = false
+   clearInterval(start)
+   resetCounter()
+   startIcon.classList.remove("fa-pause")
+   startIcon.classList.add("fa-play")
 }
 const counter =()=>{
-   interval()
+   interval(isCounting)
    if(isCounting){
       isCounting = false
       startIcon.classList.remove("fa-pause")
@@ -73,7 +74,7 @@ const counter =()=>{
 }
 reset.addEventListener("click",resetCounter)
 startButton.addEventListener('click',counter) 
-stop.addEventListener("click",stopCounter)
+stop.addEventListener("click", stopCounter)
 window.addEventListener("keydown", (e)=>{
    if(e.keyCode == 32){
       counter()
