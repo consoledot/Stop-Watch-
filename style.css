@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,14 +6,72 @@
 body{
     background-color: rgb(12, 6, 6);
     color: rgba(132, 181, 245, 0.426);
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .timer-body{
-    border: 1px solid white;
     display: flex;
-    padding:0;
     justify-content: center;
+    vertical-align: bottom;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 20rem;
+    height: 20rem;
+    align-items: center;
+    margin: 5rem auto;
+
 }
 .digits{
     font-size: 70px;
-    padding: 0 10px
+    margin: 0 10px;
+    width: 100%;
+    text-align: center;
+}
+.digits span{
+    font-size: 20px;
+}
+.stop-counter div{
+    animation: blink 1.3s  infinite;
+}
+@keyframes blink {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#milli-seconds{
+    font-size: 40px;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.controls > *{
+    margin: 1rem;
+}
+.controls p{
+    color: rgb(170, 169, 169);
+    cursor: pointer;
+}
+.controls p:hover{
+    color: rgba(132, 181, 245, 0.426);
+}
+.start{
+    background-color:rgba(132, 181, 245, 0.426);
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor:pointer;
+}
+.start:hover{
+    background-color:rgba(81, 128, 191, 0.426);
+}
+.fa{
+   color: black;
 }

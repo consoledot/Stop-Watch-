@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Stop Watch</title>
 </head>
 <body>
     <div class="timer-body">
-        <div class="digits" id="hours">1</div>
-        <div class="digits" id="minutes">22</div>
-        <div class="digits" id="seconds">54</div>
-        <div class="digits" id="milli-seconds">13</div>
+        <div class="digits" id="hours">0</div>
+        <div class="digits" id="minutes">0</div>
+        <div class="digits" id="seconds">0</div>
+        <div class="digits" id="milli-seconds">0</div>
+    </div>
+
+    <div class="controls">
+        <div class="reset">
+            <p>Reset</p>
+        </div>
+        <div class="start" id="start">
+            <i class="fa fa-play" aria-hidden="true"></i>
+        </div>
+        <div class="stop">
+            <p>Stop</p>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
