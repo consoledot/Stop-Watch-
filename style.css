@@ -13,7 +13,7 @@ body{
     justify-content: center;
     vertical-align: bottom;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 2px solid white;
     width: 20rem;
     height: 20rem;
     align-items: center;
@@ -70,8 +70,15 @@ body{
     cursor:pointer;
 }
 .start:hover{
-    background-color:rgba(81, 128, 191, 0.426);
+    background-color: white;
 }
 .fa{
    color: black;
+}
+@media only screen and (max-width: 600px) {
+   .controls{
+       position: absolute;
+       width: 100%;
+       bottom:1rem;
+   }
 }

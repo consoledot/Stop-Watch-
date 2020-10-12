@@ -57,6 +57,7 @@ const stopCounter = ()=>{
    resetCounter()
    startIcon.classList.remove("fa-pause")
    startIcon.classList.add("fa-play")
+   timerBody.classList.remove("stop-counter")
 }
 const counter =()=>{
    interval(isCounting)
@@ -72,6 +73,7 @@ const counter =()=>{
       timerBody.classList.remove("stop-counter")
    } 
 }
+
 reset.addEventListener("click",resetCounter)
 startButton.addEventListener('click',counter) 
 stop.addEventListener("click", stopCounter)
@@ -81,5 +83,8 @@ window.addEventListener("keydown", (e)=>{
    }
    if(e.keyCode == 82){
       resetCounter()
+   }
+   if(e.keyCode == 83){
+      stopCounter()
    }
 })
