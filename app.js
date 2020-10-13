@@ -1,4 +1,3 @@
-const timer = 60;
 const minutes = document.getElementById('minutes');
 const seconds = document.getElementById("seconds");
 const hours = document.getElementById("hours");
@@ -51,7 +50,7 @@ const timeCounter = ()=>{
 const interval =(value)=>{
    !value ? start = setInterval(timeCounter,10) : clearInterval(start);
 }
-const stopCounter = ()=>{
+const stopCounter = ()=>{``
    isCounting = false
    clearInterval(start)
    resetCounter()
@@ -88,3 +87,15 @@ window.addEventListener("keydown", (e)=>{
       stopCounter()
    }
 })
+window.addEventListener('DOMContentLoaded', () => {
+  displayCounter()
+});
+
+// Register service worker 
+if(navigator.serviceWorker){
+   window.addEventListener("load",()=>{
+      navigator.serviceWorker
+         .register("./sw.js")
+         .then(req => console.log)
+   })
+}
