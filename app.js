@@ -1,3 +1,4 @@
+"use strict"
 const minutes = document.getElementById('minutes');
 const seconds = document.getElementById("seconds");
 const hours = document.getElementById("hours");
@@ -12,6 +13,7 @@ let hoursCounter = 0;
 let minutesCounter = 0;
 let milliSecondsCounter =0;
 let isCounting = false;
+let start;
 
 const displayCounter =()=>{
    milliSeconds.textContent = milliSecondsCounter;
@@ -48,7 +50,7 @@ const timeCounter = ()=>{
     displayCounter()
  }
 const interval =(value)=>{
-   !value ? start = setInterval(timeCounter,10) : clearInterval(start);
+   !value ? start = setInterval(timeCounter,100) : clearInterval(start);
 }
 const stopCounter = ()=>{``
    isCounting = false
@@ -72,7 +74,7 @@ const counter =()=>{
       timerBody.classList.remove("stop-counter")
    } 
 }
-
+//Event Listeners on DOM and Keyboard 
 reset.addEventListener("click",resetCounter)
 startButton.addEventListener('click',counter) 
 stop.addEventListener("click", stopCounter)

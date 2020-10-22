@@ -1,0 +1,32 @@
+{
+    "short_name": "Stop Watch",
+    "name": "Stop Watch",
+    "description": "Stop Watch Application",
+    "icons":[
+        {
+            "src": "./images/icon.png",
+            "type": "image/png",
+            "size": "512x512"
+        }
+    ],
+    "start_url": ".",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000000",
+    "shortcuts":[
+        {
+            "name": "Stop Watch",
+            "short_name": "Stop Watch", 
+            "description":"Stop Watch Application",
+            "url":".",
+            "icons": [
+                {
+                    "src":"./images/icon.png",
+                    "size":"96x96"
+                }
+            ]
+        }
+    ]
+
+}
